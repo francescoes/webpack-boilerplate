@@ -1,19 +1,20 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const requireDir = require('require-dir');
-const { ENTRY, OUTPUT, HTML_TEMPLATE, DIST_PATH } = require('./webpack-conf/costants');
-const { babel, scss, html, fonts } = requireDir('./webpack-conf/rules');
+
+const { babel, scss, html, fonts } = requireDir('./webpack-rules');
 
 module.exports = {
-  entry: ENTRY,
+  entry: path.join(__dirname, 'index.js'),
   output: {
-    filename: OUTPUT.FILENAME,
-    path: OUTPUT.PATH
+    filename: 'bundle.js',
+    path: path.join(__dirname, 'public', 'dist')
   },
   plugins: [new HtmlWebpackPlugin({
-    template: HTML_TEMPLATE
+    template: path.join(__dirname, 'public', 'src', 'index.html')
   })],
   devServer: {
-    contentBase: DIST_PATH,
+    contentBase: path.join(__dirname, 'public', 'dist'),
     compress: true,
     port: 9000
   },
