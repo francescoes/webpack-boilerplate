@@ -1,20 +1,20 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const requireDir = require('require-dir');
+const { join } = require('path');
 
 const { babel, scss, html, fonts } = requireDir('./webpack-rules');
 
 module.exports = {
-  entry: path.join(__dirname, 'index.js'),
+  entry: join(__dirname, 'index.js'),
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'public', 'dist')
+    path: join(__dirname, 'dist')
   },
   plugins: [new HtmlWebpackPlugin({
-    template: path.join(__dirname, 'public', 'src', 'index.html')
+    template: join(__dirname, 'src', 'index.html')
   })],
   devServer: {
-    contentBase: path.join(__dirname, 'public', 'dist'),
+    contentBase: join(__dirname, 'dist'),
     compress: true,
     port: 9000
   },
