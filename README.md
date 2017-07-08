@@ -16,5 +16,5 @@ It includes rules to let you import:
 
 # Contributing
 
-- Open an issue for bugs or features requests
-- Close the repo, apply you changes and open a pull request
+- [Open](https://github.com/francescoes/webpack-boilerplate/issues/new) an issue for bugs or features requests
+- Clone the repo, apply you changes and open a pull request
