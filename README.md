@@ -1,8 +1,8 @@
 **Webpack boilerplate for frontend projects**
 
-It includes rules to let you import:
+The current definition includes rules for:
 
-- es6 files
+- js files
 - scss files
 - html templates
 - web fonts
@@ -16,5 +16,6 @@ It includes rules to let you import:
 
 # Contributing
 
+- Fork the project, add your feature (or fix a bug) and open a pull request OR
 - [Open](https://github.com/francescoes/webpack-boilerplate/issues/new) an issue for bugs or feature request.
-- Clone the repo, apply you changes and open a pull request.
+
