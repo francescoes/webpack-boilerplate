@@ -22,12 +22,13 @@
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^2.5.0",
+    "webpack-merge": "^4.1.1"
   },
   "scripts": {
     "lint": "eslint src/",
-    "build": "yarn check && yarn lint && webpack",
-    "serve:dev": "webpack-dev-server"
+    "build": "yarn check --integrity && yarn lint && webpack --config webpack/webpack.prod",
+    "serve": "webpack-dev-server --config webpack/webpack.dev"
   },
   "author": "",
   "license": "ISC",
