@@ -6,7 +6,7 @@ const { config, root } = require('./webpack.base');
 module.exports = merge(config, {
   devServer: {
     contentBase: join(root, 'dist'),
-    compress: true
+    compress: true,
   },
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map',
 });

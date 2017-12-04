@@ -6,11 +6,11 @@ module.exports = {
     options: {
       presets: [
         ['env', {
-          'targets': {
-            'browsers': ['last 2 versions']
-          }
-        }]
-      ]
+          targets: {
+            browsers: ['last 2 versions'],
+          },
+        }],
+      ],
     },
-  }
+  },
 };

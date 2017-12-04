@@ -6,23 +6,23 @@ const { babel, scss, html, fonts } = requireDir('./loaders');
 const root = resolve(__dirname, '../');
 
 module.exports = {
+  root,
   config: {
     entry: join(root, 'index.js'),
     output: {
       filename: 'app.js',
-      path: join(root, 'dist')
+      path: join(root, 'dist'),
     },
     plugins: [new HtmlWebpackPlugin({
-      template: join(root, 'src', 'index.html')
+      template: join(root, 'src', 'index.html'),
     })],
     module: {
       rules: [
         babel,
         scss,
         html,
-        fonts
-      ]
-    }
+        fonts,
+      ],
+    },
   },
-  root
 };
